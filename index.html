@@ -37,6 +37,13 @@
     <header>
       <div class="top_bar">
         <h2><a href="#hero">Mariana Figueiras</a></h2>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+        >
+          ☰
+        </button>
         <nav>
           <ul>
             <li>
@@ -87,7 +94,7 @@
         </div>
 
         <div class="hero-image">
-          <img src="./assets/profile.jpg" alt="profile photo">
+          <img src="./assets/profile.jpg" alt="profile photo" />
         </div>
       </section>
 
@@ -719,6 +726,13 @@
       } else {
         topBar.classList.remove("scrolled");
       }
+    });
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navBar = document.querySelector(".top_bar");
+
+    menuToggle.addEventListener("click", () => {
+      navBar.classList.toggle("nav-open");
     });
   </script>
 </html>

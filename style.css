@@ -108,6 +108,11 @@ section{
 
 /*NAVIGATION BAR*/
 
+/*menu icon hidden*/
+.menu-toggle {
+  display: none;
+}
+
 header{
   position: sticky;
   position: -webkit-sticky;
@@ -951,7 +956,25 @@ footer > p {
     background-color: var(--cards);
   }
 
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--accent1-transparent);
+    border-radius: var(--border_radius);
+    background: transparent;
+    color: var(--accent1);
+
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
   .top_bar {
+    position: relative;
     width: calc(100% - 24px);
     min-height: 56px;
     margin-top: 8px;
@@ -970,16 +993,38 @@ footer > p {
 
   .top_bar > nav {
     display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+
+    width: min(260px, calc(100vw - 32px));
+    padding: 18px;
+
+    display: none;
+
+    background-color: var(--cards);
+    border: 1px solid var(--accent1-transparent);
+    border-radius: var(--border_radius);
+    box-shadow: var(--nav-shadow);
   }
 
-  .top_bar::after {
-    content: "\2630";
-
-    color: var(--accent1);
-    font-size: 1.8rem;
-    line-height: 1;
-    cursor: pointer;
+  .top_bar.nav-open > nav {
+    display: block;
   }
+
+  .top_bar > nav > ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .top_bar > nav a,
+  .top_bar > nav button {
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+  
 
   /* HERO */
   .hero {
