@@ -155,7 +155,7 @@ header{
 }
 
 .top_bar a {
-  font-size: 0.92rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -165,7 +165,7 @@ header{
   border-radius: var(--border_radius);
   background: transparent;
   color: var(--accent1);
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -203,39 +203,49 @@ header{
 }
 
 
-/* HERO SECTION general structure */
+/* HERO SECTION */
 .hero {
   min-height: 100vh;
   padding: 120px var(--spacing) 80px;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(420px, 640px) minmax(240px, 320px);
+  grid-template-areas:
+    "intro image"
+    "title image"
+    "description image"
+    "links image";
+  align-content: center;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing);
+  column-gap: clamp(2rem, 4vw, 4rem);
+  row-gap: 1.3rem;
 
-  text-align: center;
   background-color: var(--cards);
 }
 
 /* small superior text */
 .hero > p:first-child {
+  grid-area: intro;
+
   color: var(--accent1);
-  font-size: 2rem;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
   font-weight: 500;
 }
 
 /* large title */
 .hero > h1 {
-  max-width: 900px;
+  grid-area: title;
+  max-width: 760px;
 
-  font-size: clamp(3rem, 8vw, 5rem);
-  line-height: 1;
   color: var(--text);
+  font-size: clamp(3.2rem, 7vw, 5.4rem);
+  line-height: 1;
 }
 
-/* Description */
+/* description */
 .hero > p:nth-of-type(2) {
+  grid-area: description;
   max-width: 680px;
 
   color: var(--secondary_text);
@@ -243,20 +253,22 @@ header{
   line-height: 1.7;
 }
 
-/*  social icon container */
+/* social icon container */
 .hero_div {
+  grid-area: links;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: var(--spacing);
+  justify-content: flex-start;
+  gap: 1.4rem;
 
-  margin-top: var(--spacing);
+  margin-top: 0.8rem;
 }
 
 /* icons links */
 .hero_div > a {
-  width: 84px;
-  height: 84px;
+  width: 68px;
+  height: 68px;
 
   display: flex;
   align-items: center;
@@ -271,17 +283,36 @@ header{
 /* icons hover */
 .hero_div > a:hover {
   transform: translateY(-3px);
-  background-color: var(--accent1-transparent)
+  background-color: var(--accent1-transparent);
 }
 
-/* icons inside of the links */
-
-.icon{
-  font-size:40px;
-  color:var(--accent1);
+/* icons inside links */
+.icon {
+  font-size: 38px;
+  color: var(--accent1);
 }
 
+/* hero image */
+.hero-image {
+  grid-area: image;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: clamp(240px, 24vw, 340px);
+  height: clamp(240px, 24vw, 340px);
+
+  display: block;
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 50%;
+ border: 1px solid var(--accent1);
+ 
+}
 
 
 /*SECCION ABOUT*/
