@@ -2,17 +2,20 @@
 
 /*Variables and generic styles */
 :root {
-  --bg: #050607;
-  --cards: #111417;
-  --cards-trasnparent: rgba(17, 20, 23, 0.78);
+  --bg: #0D1117;
+  --cards: #161B22;
+  --cards-transparent: rgba(22,27,34,.82);
 
-  --text: #dfe0e3;
-  --secondary_text: rgba(223, 224, 227, 0.68);
+  --text: #E6EDF3;
+  --secondary_text: #8B949E;
 
-  --accent1: #6cc5b6;
-  --accent1-transparent: rgba(108, 197, 182, 0.14);
-  --accent2: #0e98fc;
-  --hover: #0e98fc;
+  --accent1: #A855F7;
+  --accent1-transparent: rgba(168,85,247,.25);
+
+  --accent2: #2ECC71;
+
+  --hover: #C084FC;
+
 
   --spacing: 20px;
   --section-width: 1180px;
@@ -24,25 +27,6 @@
 
   --border_radius: 10px;
 }
-
-/* :root{
---bg: #0F172A;
---cards:rgb(30, 41, 59);
---cards-trasnparent:rgba(30,41,59,0.78);
---text:#F8FAFC;
---secondary_text:#94A3B8;
---accent1:rgb(34, 211, 238);
---accent1-transparent: rgba(34,211,238,0.14);
---accent2:#ff4d6d;
---hover:#38BDF8;
---spacing:20px;
---section-width:1180px;
---section-padding:96px;
---card-border:1px solid rgba(148, 163, 184, 0.14);
---card-shadow: 0 12px 30px rgba(2, 6, 23, 0.18);
---nav-shadow: 0 10px 24px rgba(2, 6, 23, 0.24);
---border_radius:10px;
-} */
 
 html{
   scroll-behavior: smooth;
@@ -148,7 +132,7 @@ header{
 
   background-color: var(--cards-trasnparent);
   backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+ 
 
   border: 1px solid transparent;
   border-radius: var(--border_radius);
@@ -207,12 +191,9 @@ header{
   margin-left: -10px;
 
   color: var(--accent1);
-  border: 1px solid transparent;
-  border-radius: var(--border_radius);
-  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-size: clamp(1.1rem, 2vw, 1.45rem); 
 
-  transition: color 0.3s ease, background-color 0.3s ease,
-    border-color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* link hero section hover  */
@@ -240,7 +221,7 @@ header{
 /* small superior text */
 .hero > p:first-child {
   color: var(--accent1);
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -274,8 +255,8 @@ header{
 
 /* icons links */
 .hero_div > a {
-  width: 44px;
-  height: 44px;
+  width: 84px;
+  height: 84px;
 
   display: flex;
   align-items: center;
@@ -294,13 +275,12 @@ header{
 }
 
 /* icons inside of the links */
-.hero_div > a > img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(77%) sepia(92%) saturate(647%)
-    hue-rotate(139deg) brightness(96%) contrast(93%);
+
+.icon{
+  font-size:40px;
+  color:var(--accent1);
 }
+
 
 
 
@@ -373,15 +353,7 @@ header{
   gap: var(--spacing);
 }
 
-/* small icon graduation cap */
-.education_info > img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  opacity: 0.55;
-  filter: brightness(0) saturate(100%) invert(77%) sepia(92%) saturate(647%)
-    hue-rotate(139deg) brightness(96%) contrast(93%);
-}
+
 
 /* academy name */
 .education_info h4 {
@@ -490,12 +462,9 @@ header{
 }
 
 /* skill icon  */
-.individual-skill > img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(77%) sepia(92%) saturate(647%)
-    hue-rotate(139deg) brightness(96%) contrast(93%);
+.skill-icon {
+ font-size: 20px;
+color: var(--accent1);
 }
 /* skill text  */
 .individual-skill > p{
@@ -923,15 +892,6 @@ footer > p {
  
 }
 
-/* Scroll icon */
-.scroll-top > img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-
-  filter: brightness(0) saturate(100%) invert(77%) sepia(92%) saturate(647%)
-    hue-rotate(139deg) brightness(96%) contrast(93%);
-}
 
 /* Scroll button hover */
 .scroll-top:hover {
