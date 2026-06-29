@@ -859,6 +859,7 @@ white-space: nowrap;
   gap: var(--spacing);
 
   text-align: center;
+  padding-bottom: var(--spacing); 
 }
 
 /* Contact title */
@@ -938,17 +939,42 @@ width: 100%;
 
 /* FOOTER */
 footer {
-  padding: 28px var(--spacing);
-  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-  text-align: center;
+  gap: var(--spacing);
+  
+  padding-bottom: var(--spacing);
+  
 }
 
-/* Footer text */
-footer > p {
+.footer-socials {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: ;
+  gap: var(--spacing);
+}
+
+.footer-socials a > i {
   color: var(--secondary_text);
-  font-size: 0.9rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
+.footer-socials a > i:hover {
+  color: var(--accent1);
+  transform: translateY(-2px);
+
+}
+
+footer > p{
+  color:var(--secondary_text);
+  padding: var(--spacing);
+  
+}
+
 
 /* SCROLL TO TOP BUTTON */
 .scroll-top {

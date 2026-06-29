@@ -731,9 +731,29 @@
       </section>
     </main>
     <footer>
+      
       <p>
-        Designed & built by Mariana Figueiras &copy; 2026. All rights reserved.
+        Designed & built by Mariana Figueiras &copy; <span id="current-year"></span> All rights reserved.
       </p>
+      <div class="footer-socials">
+      <a
+      href="https://github.com/marianafigueiras97-rgb"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+    >
+    <i class="devicon-github-original icon"></i>
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/mariana-cristina-figueiras-rinc%C3%B3n-266435173/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+    >
+      <i class="devicon-linkedin-plain icon"></i>
+    </a>
+  </div>
     </footer>
 
     <a href="#" class="scroll-top" aria-label="Scroll to top">
@@ -753,8 +773,11 @@
         <path d="M12 2V22" />
       </svg>
     </a>
+
+
   </body>
   <script>
+    // script to activate the css in the nav bar when scroll happens 
     const topBar = document.querySelector(".top_bar");
 
     window.addEventListener("scroll", () => {
@@ -765,11 +788,16 @@
       }
     });
 
+    // script to show the menu dropdown in the mobile nav bar 
     const menuToggle = document.querySelector(".menu-toggle");
     const navBar = document.querySelector(".top_bar");
 
     menuToggle.addEventListener("click", () => {
       navBar.classList.toggle("nav-open");
     });
+
+// scrip to update the year in the footer 
+    document.getElementById("current-year").textContent =
+    new Date().getFullYear();
   </script>
 </html>
