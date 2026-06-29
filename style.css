@@ -2,19 +2,17 @@
 
 /*Variables and generic styles */
 :root {
-  --bg: #0D1117;
-  --cards: #161B22;
-  --cards-transparent: rgba(22,27,34,.82);
+  --bg: #101418;
+  --cards: #1f2933;
+  --cards-transparent: rgba(31, 41, 51, 0.84);
 
-  --text: #E6EDF3;
-  --secondary_text: #8B949E;
+  --text: #f7fafc;
+  --secondary_text: #a8b3bf;
 
-  --accent1: #A855F7;
-  --accent1-transparent: rgba(168,85,247,.25);
+  --accent1: #38bdf8;
+  --accent1-transparent: rgba(56, 189, 248, 0.22);
 
-  --accent2: #2ECC71;
-
-  --hover: #C084FC;
+  --accent2: #2dd4bf;
 
 
   --spacing: 20px;
@@ -28,11 +26,13 @@
   --border_radius: 10px;
 }
 
+/*scroll behavior*/
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
 }
  
+/* reset */
 *{
   margin: 0;
   padding: 0;
@@ -61,7 +61,7 @@ a{
 }
 
 a:hover{
-  color: var(--hover);
+  color: var(--accent1);
 }
 
 img{
@@ -113,9 +113,9 @@ section{
   display: none;
 }
 
+/* generic header structure  */
 header{
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
   z-index: 1000;
 
@@ -125,6 +125,7 @@ header{
 
 }
 
+/* header content */
 .top_bar{
   width: min(88%, 1040px);
   min-height: 46px;
@@ -135,7 +136,7 @@ header{
   justify-content: space-between;
   align-items: center;
 
-  background-color: var(--cards-trasnparent);
+  background-color: var(--cards-transparent);
   backdrop-filter: blur(14px);
  
 
@@ -164,9 +165,10 @@ header{
   font-weight: 600;
 }
 
+/* resume button  */
 .top_bar button {
   padding: 7px 14px;
-  border: 1px solid var(--hover);
+  border: 1px solid var(--accent1);
   border-radius: var(--border_radius);
   background: transparent;
   color: var(--accent1);
@@ -182,7 +184,7 @@ header{
   color: var(--text);
 }
 
-/* hero section link container */
+/* my name link to hero section */
 .top_bar > h2 {
   line-height: 1;
 }
@@ -201,7 +203,7 @@ header{
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* link hero section hover  */
+/* link hover  */
 .top_bar > h2 > a:hover {
   color: var(--text);
   transform: translateY(-1px);
@@ -922,7 +924,7 @@ footer > p {
   align-items: center;
   justify-content: center;
 
-  background-color: var(--cards-trasnparent);
+  background-color: var(--cards-transparent);
   border: 1px solid var(--accent1-transparent);
   border-radius: 50%;
  
