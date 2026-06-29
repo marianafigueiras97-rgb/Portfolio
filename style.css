@@ -392,16 +392,16 @@ header{
 }
 
 
+/* description of the course */
 
-/* academy name */
-.education_info h3 {
+.education_info h4 {
   margin-bottom: 8px;
 
   color: var(--text);
   font-size: 1.15rem;
 }
 
-/* description of the course */
+/* academy name */
 .education_info p {
   color: var(--secondary_text);
   line-height: 1.5;
@@ -515,11 +515,12 @@ color: var(--accent1);
 /* title for competencies block */
 .core-competencies > h3 {
   color: var(--accent2);
- font-size: 0.95rem;
+ font-size: clamp(1.6rem, 8vw, 2.2rem);
  font-weight: 700;
  text-transform: uppercase;
  letter-spacing: 4px;
  text-align: center;
+ margin-top: 80px;
  margin-bottom: 18px;
 }
 
@@ -841,7 +842,7 @@ white-space: nowrap;
 /* Date text */
 .timeline .date {
   color: var(--accent1);
-  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 8vw, 1.8rem);
   font-weight: 700;
   white-space: nowrap;
 }
@@ -875,17 +876,56 @@ white-space: nowrap;
   line-height: 1.7;
 }
 
+/*form*/
+
+.contact-form{
+display: flex;
+flex-direction: column;
+gap: var(--spacing);
+
+width: min(100%,600px);
+margin: 32px auto 0;
+text-align: left;
+color: var(--text);
+font-size: 1.1rem;
+
+
+
+}
+
+.contact-form input,
+.contact-form textarea{
+width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  min-height: 48px;
+  border-radius: var(--border_radius);
+  background-color: var(--cards);
+  border: var(--card-border);
+  color: var(--secondary_text);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+  
+  
+
+}
+
 /* Main contact button */
 .contact-button {
+  width: 12rem; 
   margin-top: var(--spacing);
   padding: 12px 28px;
-
+  align-self: center;
   color: var(--accent1);
   border: 1px solid var(--accent1-transparent);
   border-radius: 999px;
   background-color: transparent;
-
+  font-size: 1.1rem;
   font-weight: 700;
+  transition: 0.3s ease;
 }
 
 /* Contact button hover */
@@ -1164,6 +1204,7 @@ footer > p {
   .core-competencies > h3 {
     letter-spacing: 2px;
     line-height: 1.4;
+    
   }
 
   .competencies-group {
