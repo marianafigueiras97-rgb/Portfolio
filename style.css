@@ -394,7 +394,7 @@ header{
 
 
 /* academy name */
-.education_info h4 {
+.education_info h3 {
   margin-bottom: 8px;
 
   color: var(--text);
@@ -457,7 +457,7 @@ header{
 }
 
 /* subtitles for type os skills */
-.typeofskill > h4 {
+.typeofskill > h3 {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -513,7 +513,7 @@ color: var(--accent1);
 }
 
 /* title for competencies block */
-.core-competencies > h4 {
+.core-competencies > h3 {
   color: var(--accent2);
  font-size: 0.95rem;
  font-weight: 700;
@@ -629,7 +629,7 @@ white-space: nowrap;
 }
 
 /* project title */
-.project-content > h4 {
+.project-content > h3 {
   margin-bottom: var(--spacing);
 
   color: var(--text);
@@ -1161,7 +1161,7 @@ footer > p {
     flex: 1 1 130px;
   }
 
-  .core-competencies > h4 {
+  .core-competencies > h3 {
     letter-spacing: 2px;
     line-height: 1.4;
   }
