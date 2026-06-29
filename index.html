@@ -54,24 +54,31 @@
             <li>
               <a href="#about">About</a>
             </li>
-            <a href="#projects">Projects</a>
-            <li></li>
+
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+
             <li>
               <a href="#skills">Skills</a>
             </li>
+
             <li>
               <a href="#experience">Experience</a>
             </li>
+
             <li>
               <a href="#contact">Contact</a>
             </li>
+
             <li>
               <a
                 href="./assets/CV_Limpieza_Mariana.pdf"
                 download="CV_Limpieza_Mariana"
+                class="resume-button"
               >
-                <button type="button">Resume</button></a
-              >
+                Resume
+              </a>
             </li>
           </ul>
         </nav>
@@ -164,7 +171,7 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
-                heigth="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -202,7 +209,7 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
-                heigth="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -232,7 +239,7 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
-                heigth="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -262,7 +269,7 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
-                heigth="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -400,7 +407,8 @@
               <div class="project-links">
                 <a
                   href="https://github.com/marianafigueiras97-rgb/Gestion_Incidencias"
-                   target="_blank">GitHub Repo</a
+                  target="_blank"
+                  >GitHub Repo</a
                 >
                 <a href="">Live Demo</a>
               </div>
@@ -714,15 +722,31 @@
 
         <form action="/action_page-php" method="post" class="contact-form">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Tell me your name" required>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Tell me your name"
+            required
+          />
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Write your email" required>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Write your email"
+            required
+          />
           <label for="message">Message</label>
-          <input type="text" name="message" id="message" placeholder="How can i help you?"  required>
+          <input
+            type="text"
+            name="message"
+            id="message"
+            placeholder="How can i help you?"
+            required
+          />
 
           <button type="submit" class="contact-button">Say Hello</button>
-
-
         </form>
 
         <!-- <a href="mailto:marianafigueiras97@gmail.com" class="contact-button"
@@ -731,29 +755,29 @@
       </section>
     </main>
     <footer>
-      
       <p>
-        Designed & built by Mariana Figueiras &copy; <span id="current-year"></span> All rights reserved.
+        Designed & built by Mariana Figueiras &copy;
+        <span id="current-year"></span> All rights reserved.
       </p>
       <div class="footer-socials">
-      <a
-      href="https://github.com/marianafigueiras97-rgb"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="GitHub"
-    >
-    <i class="devicon-github-original icon"></i>
-    </a>
+        <a
+          href="https://github.com/marianafigueiras97-rgb"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="devicon-github-original icon"></i>
+        </a>
 
-    <a
-      href="https://www.linkedin.com/in/mariana-cristina-figueiras-rinc%C3%B3n-266435173/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="LinkedIn"
-    >
-      <i class="devicon-linkedin-plain icon"></i>
-    </a>
-  </div>
+        <a
+          href="https://www.linkedin.com/in/mariana-cristina-figueiras-rinc%C3%B3n-266435173/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="devicon-linkedin-plain icon"></i>
+        </a>
+      </div>
     </footer>
 
     <a href="#" class="scroll-top" aria-label="Scroll to top">
@@ -773,11 +797,8 @@
         <path d="M12 2V22" />
       </svg>
     </a>
-
-
-  </body>
-  <script>
-    // script to activate the css in the nav bar when scroll happens 
+    <script>
+    // script to activate the css in the nav bar when scroll happens
     const topBar = document.querySelector(".top_bar");
 
     window.addEventListener("scroll", () => {
@@ -788,7 +809,7 @@
       }
     });
 
-    // script to show the menu dropdown in the mobile nav bar 
+    // script to show the menu dropdown in the mobile nav bar
     const menuToggle = document.querySelector(".menu-toggle");
     const navBar = document.querySelector(".top_bar");
 
@@ -796,8 +817,10 @@
       navBar.classList.toggle("nav-open");
     });
 
-// scrip to update the year in the footer 
+    // scrip to update the year in the footer
     document.getElementById("current-year").textContent =
-    new Date().getFullYear();
+      new Date().getFullYear();
   </script>
+  </body>
+  
 </html>

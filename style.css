@@ -166,7 +166,7 @@ header{
 }
 
 /* resume button  */
-.top_bar button {
+.resume-button{
   padding: 7px 14px;
   border: 1px solid var(--accent1);
   border-radius: var(--border_radius);
@@ -177,7 +177,7 @@ header{
   cursor: pointer;
 }
 
-.top_bar button:hover {
+.resume-button:hover {
   transition: 0.3s ease;
   transform: translateY(-2px);
   background-color: var(--accent1-transparent);
